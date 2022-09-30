@@ -1,11 +1,12 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import ReactLoading from "react-loading";
 import Navbar from "./Navbar";
 import "./style.css";
 
 const People = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(undefined);
 
   const fetchData = async () => {
     try {
@@ -27,8 +28,18 @@ const People = () => {
       <div>
         <Navbar />
       </div>
+      {!loading ? (
+        <ReactLoading
+          className="loading"
+          type={"bars"}
+          color={"#03fc4e"}
+          height={100}
+          width={100}
+        />
+      ) : (
+        loading
+      )}
       <div className="grid grid-cols-4 gap-4">
-        {loading ? loading : "Loading..."}
         {data.map((data) => (
           <div class="max-w-sm rounded overflow-hidden shadow-lg" id="card">
             <div class="px-6 py-4">
