@@ -31,24 +31,32 @@ const Planet = ({ children }) => {
           <div className="max-w-sm rounded overflow-hidden shadow-lg" id="card">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2"></div>
-              <p className="text-gray-700 text-base">Name: {data.name}</p>
               <p className="text-gray-700 text-base">
-                Rotation Period: {data.rotation_period}
+                <b>Name :</b> {data.name}
               </p>
               <p className="text-gray-700 text-base">
-                Orbital Period: {data.orbital_period}
+                <b>Rotation Period :</b> {data.rotation_period}
               </p>
               <p className="text-gray-700 text-base">
-                Diameter: {data.diameter}
-              </p>
-              <p className="text-gray-700 text-base">Climate: {data.climate}</p>
-              <p className="text-gray-700 text-base">Gravity: {data.gravity}</p>
-              <p className="text-gray-700 text-base">Terrain: {data.terrain}</p>
-              <p className="text-gray-700 text-base">
-                Surface Water: {data.surface_water}
+                <b>Orbital Period :</b> {data.orbital_period}
               </p>
               <p className="text-gray-700 text-base">
-                Population: {data.population}
+                <b>Diameter :</b> {data.diameter}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Climate :</b> {data.climate}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Gravity :</b> {data.gravity}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Terrain :</b> {data.terrain}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Surface Water :</b> {data.surface_water}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Population :</b> {data.population}
               </p>
             </div>
             <div className="px-6 pt-4 pb-2"></div>

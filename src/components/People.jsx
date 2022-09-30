@@ -30,24 +30,32 @@ const People = () => {
           <div class="max-w-sm rounded overflow-hidden shadow-lg" id="card">
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2"></div>
-              <p class="text-gray-700 text-base">Nama: {data.name}</p>
-              <p className="text-gray-700 text-base">Height: {data.height}</p>
-              <p className="text-gray-700 text-base">Mass: {data.mass}</p>
-              <p className="text-gray-700 text-base">
-                Hair Color: {data.hair_color}
+              <p class="text-gray-700 text-base">
+                <b>Nama :</b> {data.name}
               </p>
               <p className="text-gray-700 text-base">
-                Skin Color: {data.skin_color}
+                <b>Height :</b> {data.height}
               </p>
               <p className="text-gray-700 text-base">
-                Eye Color: {data.eye_color}
+                <b>Mass :</b> {data.mass}
               </p>
               <p className="text-gray-700 text-base">
-                Birth Year: {data.birth_year}
+                <b>Hair Color :</b> {data.hair_color}
               </p>
-              <p className="text-gray-700 text-base">Gender: {data.gender}</p>
               <p className="text-gray-700 text-base">
-                Homeworld: {data.homeworld}
+                <b>Skin Color :</b> {data.skin_color}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Eye Color :</b> {data.eye_color}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Birth Year :</b> {data.birth_year}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Gender :</b> {data.gender}
+              </p>
+              <p className="text-gray-700 text-base">
+                <b>Homeworld :</b> {data.homeworld}
               </p>
             </div>
             <div class="px-6 pt-4 pb-2"></div>
