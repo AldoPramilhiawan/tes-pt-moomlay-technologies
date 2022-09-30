@@ -5,14 +5,12 @@ import "./style.css";
 
 const Planet = ({ children }) => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   const fetchData = async () => {
     try {
       const response = await axios.get("https://swapi.dev/api/planets");
       setData(response.data.results);
       console.log(response.data.results);
-      setLoading(true);
     } catch (err) {
       console.log(err);
     }
