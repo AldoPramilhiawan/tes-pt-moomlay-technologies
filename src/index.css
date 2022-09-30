@@ -25,3 +25,7 @@ li a {
 li a:hover {
   background-color: #111;
 }
+
+.grid {
+  border: 20px;
+}
