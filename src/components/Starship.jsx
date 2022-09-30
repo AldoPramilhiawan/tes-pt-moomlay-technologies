@@ -28,9 +28,6 @@ const Starship = () => {
       </div>
       <div className="grid grid-cols-4 gap-4">
         {loading ? loading : "Loading..."}
-        {/* <button type="button" class="bg-indigo-500 ..." disabled>
-          <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24"></svg>
-        </button> */}
         {data.map((data) => (
           <div className="max-w-sm rounded overflow-hidden shadow-lg" id="card">
             <div className="px-6 py-4">

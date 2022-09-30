@@ -5,12 +5,14 @@ import "./style.css";
 
 const Planet = ({ children }) => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState();
 
   const fetchData = async () => {
     try {
       const response = await axios.get("https://swapi.dev/api/planets");
       setData(response.data.results);
       console.log(response.data.results);
+      setLoading(true);
     } catch (err) {
       console.log(err);
     }
@@ -25,6 +27,7 @@ const Planet = ({ children }) => {
         <Navbar />
       </div>
       <div className="grid grid-cols-4 gap-4">
+        {loading ? loading : "Loading..."}
         {data.map((data) => (
           <div className="max-w-sm rounded overflow-hidden shadow-lg" id="card">
             <div className="px-6 py-4">
