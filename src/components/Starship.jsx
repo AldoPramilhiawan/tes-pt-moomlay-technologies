@@ -3,6 +3,7 @@ import axios from "axios";
 import ReactLoading from "react-loading";
 import Navbar from "./Navbar";
 import "./style.css";
+import Create from "./Create";
 
 const Starship = () => {
   const [data, setData] = useState([]);
@@ -27,17 +28,10 @@ const Starship = () => {
       <div>
         <Navbar />
       </div>
-      {!loading ? (
-        <ReactLoading
-          className="loading"
-          type={"bars"}
-          color={"#03fc4e"}
-          height={100}
-          width={100}
-        />
-      ) : (
-        loading
-      )}
+      <div>
+        <Create />
+      </div>
+      {!loading ? <ReactLoading className="loading" type={"bars"} color={"#03fc4e"} height={100} width={100} /> : loading}
       <div className="grid grid-cols-4 gap-4">
         {data.map((data) => (
           <div className="max-w-sm rounded overflow-hidden shadow-lg" id="card">
@@ -83,7 +77,11 @@ const Starship = () => {
                 <b> Starship Class : </b> {data.starship_class}
               </p>
             </div>
-            <div className="px-6 pt-4 pb-2"></div>
+            <div className="px-6 pt-4 pb-2">
+              <button class="bg-green-500 text-white rounded-md px-8 py-2 text-base font-medium hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300" id="open-btn">
+                Update
+              </button>
+            </div>
           </div>
         ))}
       </div>
